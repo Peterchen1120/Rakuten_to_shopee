@@ -3,7 +3,7 @@ import os
 import tempfile
 import unittest
 
-from rakuten_amazon_to_shopee.main import build_preview_from_product
+from rakuten_amazon_to_shopee.service import build_preview_from_product
 from rakuten_amazon_to_shopee.models import SourceProduct
 
 

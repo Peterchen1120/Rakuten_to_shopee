@@ -1,4 +1,4 @@
-from rakuten_amazon_to_shopee.main import main
+from rakuten_amazon_to_shopee.service import main
 
 
 if __name__ == "__main__":
