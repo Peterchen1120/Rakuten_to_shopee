@@ -15,7 +15,8 @@ from .preview_renderer import render_preview_html
 from .source_router import detect_source
 from .transform import source_to_listing_preview
 
-
+# 用 url 獲得商品 json
+# source_credentials 可不填，後面會用 getenv 去找
 def fetch_source_product(url: str, source_credentials=None):
     source = detect_source(url)
     if source == "rakuten":
