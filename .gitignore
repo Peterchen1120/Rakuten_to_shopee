@@ -3,4 +3,5 @@ __pycache__/
 .env
 .pytest_cache/
 preview_payload.json
+.venv
 
