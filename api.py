@@ -1,6 +1,6 @@
 from fastapi import FastAPI,HTTPException
 from fastapi.responses import JSONResponse 
-from pydantic import BaseModel
+from schema import ProductData
 
 
 from rakuten_amazon_to_shopee.service import fetch_source_product
@@ -9,12 +9,6 @@ from rakuten_amazon_to_shopee.transform import source_to_listing_preview
 app = FastAPI()
 # uvicorn api:app --reload
 # 用上面那行來啟動，最後面的 --reload 是用來 hot reload 用的
-
-class ProductData(BaseModel): # post 傳進來的商品資訊會是以
-    title: str
-    price_twd: int # 若傳進來的是"580"，BaseModel 支援自動轉型成 int，不會抱錯
-    description: str
-    image_urls: list[str]
 
 # ====================================================================
 
